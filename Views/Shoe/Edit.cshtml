@@ -1,0 +1,24 @@
+﻿@model Shoe
+
+<h2>Edit page</h2>
+
+<form asp-controller="Shoe" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="@Model.Id" />
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Nome"></label>
+        <input type="text" class="form-control" asp-for="@Model.Nome">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Prezzo"></label>
+        <input type="number" class="form-control" asp-for="@Model.Prezzo">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Descrizione"></label>
+        <textarea class="form-control" rows="3" asp-for="@Model.Descrizione"></textarea>
+    </div>
+
+    <button class="btn btn-primary">Modifica</button>
+</form>

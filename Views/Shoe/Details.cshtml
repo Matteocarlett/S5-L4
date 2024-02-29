@@ -1,0 +1,12 @@
+﻿<h2>@Model.Nome</h2>
+<img src="@Model.Image" />
+<h3>@Model.Prezzo</h3>
+<p>@Model.Descrizione</p>
+
+<div class="d-flex">
+    <a class="btn btn-warning" asp-controller="Shoe" asp-action="Edit" asp-route-id="@Model.Id">Modifica</a>
+
+    <form asp-controller="Shoe" asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <button class="btn btn-danger">Elimina</button>
+    </form>
+</div>
